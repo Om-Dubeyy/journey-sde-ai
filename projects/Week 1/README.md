@@ -18,6 +18,7 @@ A simple calculator application built in Python as part of Week 1 of my SDE jour
 # Supports addition, subtraction, multiplication, and division.
 # User-friendly interface (terminal-based).
 
+
 def add(a, b):
     return a + b
 
@@ -37,13 +38,14 @@ def calculator():
     print("Operations: + (add), - (subtract), * (multiply), / (divide)")
     print("-----------------------------------")
 
-    while True:
+
+while True:
         try:
             num1 = float(input("Enter first number: "))
             operation = input("Enter operation (+, -, *, /): ")
             num2 = float(input("Enter second number: "))
 
-            if operation == '+':
+if operation == '+':
                 result = add(num1, num2)
             elif operation == '-':
                 result = subtract(num1, num2)
@@ -55,11 +57,11 @@ def calculator():
                 print("Invalid operation! Please choose +, -, *, or /.")
                 continue
 
-            print(f"Result: {result}")
+print(f"Result: {result}")
         except ValueError:
             print("Invalid input! Please enter numeric values.")
 
-        choice = input("Do you want to perform another calculation? (y/n): ").lower()
+choice = input("Do you want to perform another calculation? (y/n): ").lower()
         if choice != 'y':
             print("Thank you for using the calculator. Goodbye!")
             break
