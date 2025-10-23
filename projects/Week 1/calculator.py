@@ -1,50 +1,49 @@
-# Simple Calculator
-# Demonstrates basic arithmetic operations in Python
 
-def add(x, y):
-    """Add two numbers"""
-    return x + y
+def add(a, b):
+    return a + b
 
-def subtract(x, y):
-    """Subtract two numbers"""
-    return x - y
+def subtract(a, b):
+    return a - b
 
-def multiply(x, y):
-    """Multiply two numbers"""
-    return x * y
+def multiply(a, b):
+    return a * b
 
-def divide(x, y):
-    """Divide two numbers"""
-    if y == 0:
-        return "Error: Cannot divide by zero"
-    return x / y
+def divide(a, b):
+    if b == 0:
+        return "Error! Division by zero is not allowed."
+    return a / b
 
-def main():
-    """Main function to run the calculator"""
-    print("Simple Calculator")
-    print("Select operation:")
-    print("1. Add")
-    print("2. Subtract")
-    print("3. Multiply")
-    print("4. Divide")
-    
-    choice = input("Enter choice (1/2/3/4): ")
-    
-    if choice in ['1', '2', '3', '4']:
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-        
-        if choice == '1':
-            print(f"{num1} + {num2} = {add(num1, num2)}")
-        elif choice == '2':
-            print(f"{num1} - {num2} = {subtract(num1, num2)}")
-        elif choice == '3':
-            print(f"{num1} * {num2} = {multiply(num1, num2)}")
-        elif choice == '4':
-            result = divide(num1, num2)
-            print(f"{num1} / {num2} = {result}")
-    else:
-        print("Invalid input")
+def calculator():
+    print("Welcome to the Simple Calculator!")
+    print("Operations: + (add), - (subtract), * (multiply), / (divide)")
+    print("-----------------------------------")
+
+    while True:
+        try:
+            num1 = float(input("Enter first number: "))
+            operation = input("Enter operation (+, -, *, /): ")
+            num2 = float(input("Enter second number: "))
+
+            if operation == '+':
+                result = add(num1, num2)
+            elif operation == '-':
+                result = subtract(num1, num2)
+            elif operation == '*':
+                result = multiply(num1, num2)
+            elif operation == '/':
+                result = divide(num1, num2)
+            else:
+                print("Invalid operation! Please choose +, -, *, or /.")
+                continue
+
+            print(f"Result: {result}")
+        except ValueError:
+            print("Invalid input! Please enter numeric values.")
+
+        choice = input("Do you want to perform another calculation? (y/n): ").lower()
+        if choice != 'y':
+            print("Thank you for using the calculator. Goodbye!")
+            break
 
 if __name__ == "__main__":
-    main()
+    calculator()
