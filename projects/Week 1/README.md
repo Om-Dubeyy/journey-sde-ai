@@ -1,70 +1,109 @@
-# Week 1 Project: Calculator App
+# Calculator App
 
-# Description
-A simple calculator application built in Python as part of Week 1 of my SDE journey.
+## 📋 Project Overview
 
-## Features
-- Addition, subtraction, multiplication, division support
-- User-friendly interface (terminal-based)
+A simple yet functional calculator application built in Python as part of Week 1 of my Software Development Engineer (SDE) journey. This project demonstrates fundamental programming concepts including functions, user input handling, and basic arithmetic operations.
 
-## Technologies Used
-- Python
+## ✨ Features
 
-# Simple Calculator Application
-# Week 1 of my SDE journey
+- **Basic Arithmetic Operations**
+  - Addition (+)
+  - Subtraction (-)
+  - Multiplication (×)
+  - Division (÷)
+- **Error Handling**: Division by zero protection
+- **User-Friendly Interface**: Clean terminal-based interaction
+- **Input Validation**: Ensures proper user input
 
-# Description:
-# A simple calculator application built in Python.
-# Supports addition, subtraction, multiplication, and division.
-# User-friendly interface (terminal-based).
+## 🛠️ Technologies Used
 
+- **Language**: Python 3.x
+- **Environment**: Terminal/Command Line
 
-def add(a, b):
-    return a + b
+## 🚀 Getting Started
 
-def subtract(a, b):
-    return a - b
+### Prerequisites
 
-def multiply(a, b):
-    return a * b
+- Python 3.x installed on your system
+- Basic understanding of terminal/command line
 
-def divide(a, b):
-    if b == 0:
-        return "Error! Division by zero is not allowed."
-    return a / b
+### Installation
 
-def calculator():
-    print("Welcome to the Simple Calculator!")
-    print("Operations: + (add), - (subtract), * (multiply), / (divide)")
-    print("-----------------------------------")
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Om-Dubeyy/journey-sde-ai.git
+   ```
 
+2. Navigate to the project directory:
+   ```bash
+   cd journey-sde-ai/projects/Week\ 1/
+   ```
 
-while True:
-        try:
-            num1 = float(input("Enter first number: "))
-            operation = input("Enter operation (+, -, *, /): ")
-            num2 = float(input("Enter second number: "))
+3. Run the calculator:
+   ```bash
+   python calculator.py
+   ```
 
-if operation == '+':
-                result = add(num1, num2)
-            elif operation == '-':
-                result = subtract(num1, num2)
-            elif operation == '*':
-                result = multiply(num1, num2)
-            elif operation == '/':
-                result = divide(num1, num2)
-            else:
-                print("Invalid operation! Please choose +, -, *, or /.")
-                continue
+## 💻 Usage
 
-print(f"Result: {result}")
-        except ValueError:
-            print("Invalid input! Please enter numeric values.")
+1. Launch the application
+2. Select an operation from the menu
+3. Enter the required numbers
+4. View the calculated result
+5. Choose to perform another calculation or exit
 
-choice = input("Do you want to perform another calculation? (y/n): ").lower()
-        if choice != 'y':
-            print("Thank you for using the calculator. Goodbye!")
-            break
+## 📝 Code Structure
 
-if __name__ == "__main__":
-    calculator()
+```python
+# Main functions
+add(a, b)       # Addition operation
+subtract(a, b)  # Subtraction operation
+multiply(a, b)  # Multiplication operation
+divide(a, b)    # Division operation with zero-check
+```
+
+## 🎯 Learning Objectives
+
+- Understanding Python functions and return values
+- Implementing user input handling
+- Error handling and validation
+- Code organization and documentation
+- Version control with Git
+
+## 🐛 Known Issues
+
+- Currently supports only two operands at a time
+- Limited to basic arithmetic operations
+
+## 🔮 Future Enhancements
+
+- [ ] Add support for advanced operations (power, square root, etc.)
+- [ ] Implement calculation history
+- [ ] Create a graphical user interface (GUI)
+- [ ] Support for multiple operands
+- [ ] Add unit tests
+
+## 📚 Lessons Learned
+
+- Proper function design and modularity
+- Importance of error handling
+- User experience considerations in CLI applications
+- Git workflow and commit practices
+
+## 🤝 Contributing
+
+This is a learning project, but suggestions and feedback are welcome! Feel free to open an issue or submit a pull request.
+
+## 📄 License
+
+This project is open source and available for educational purposes.
+
+## 👤 Author
+
+**Om Dubey**
+- GitHub: [@Om-Dubeyy](https://github.com/Om-Dubeyy)
+- Project: [Journey SDE AI](https://github.com/Om-Dubeyy/journey-sde-ai)
+
+---
+
+*Week 1 Project - Part of my journey to becoming a Software Development Engineer*
